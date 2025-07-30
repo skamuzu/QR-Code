@@ -5,16 +5,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --main-color: white;
+    --bg-color: hsl(212, 45%, 89%);
+    --h1-color: hsl(218, 44%, 22%);
+    --p-color: hsl(216, 15%, 48%);
 }
 
 html, body {
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--bg-color);
     max-width: 100%;
     min-height: 100vh;
 }
 
 main {
-    background-color: white;
+    background-color: var(--main-color);
     position: absolute;
     width: 20em;
     height: fit-content;
@@ -30,7 +34,7 @@ main img {
     width: 100%;
     margin: auto;
     border-radius: 1em;
-    margin-bottom: 1em;
+    margin-block-end: 1em;
 }
 
 h1,p {
@@ -38,15 +42,15 @@ h1,p {
 }
 
 h1 {
-    color: hsl(218, 44%, 22%);
+    color: var(--h1-color);
     font-size: 1.6em;
-    width: 18ch;
-    margin-bottom: 1rem;
+    width: clamp(18ch, 80%, 20ch);
+    margin-block-end: 1rem;
 }
 
 p{
-    font-size: 15px;
-    color: hsl(216, 15%, 48%);
+    font-size: 1em;
+    color: var(--p-color);
     width: 25ch;
-    margin-bottom: 2.5em;
+    margin-block-end: 2.5em;
 }
